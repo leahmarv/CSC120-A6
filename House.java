@@ -55,7 +55,9 @@ public class House extends Building {
   }
 
   public static void main(String[] args) {
-    //new House();
+    House Chapin = new House("Chapin", "1 Chapin Way", 4, true);
+    Chapin.hasDiningRoom();
+  
   }
 
 }

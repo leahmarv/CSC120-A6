@@ -24,13 +24,14 @@ public class Library extends Building {
 
     public String removeTitle(String title) {
         collection.remove(title);
+        return title;
     }
 
     public void checkOut(String title) {
         collection.replace(title, true, false);
     }
 
-    public void return(String title) {
+    public void returnBook(String title) {
       collection.replace(title, true, false);
     }
   
@@ -56,7 +57,7 @@ public class Library extends Building {
     }
 
     public static void main(String[] args) {
-      new Library();
+      //new Library();
     }
   
   }

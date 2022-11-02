@@ -18,19 +18,29 @@ public class Cafe extends Building {
         this.nSugarPackets = sugar;
         this.nCreams = cream;
         this.nCups = cups;
-
     }
     
-    public void sellCoffee(int size, int nSugarPackets, int nCreams) {
+    public void sellCoffee(int size, int sugar, int cream) {
+        
+        nCoffeeOunces -= size;
+        nSugarPackets -= sugar;
+        nCreams -= cream;
+        nCups -= 1;
 
+        if (nCoffeeOunces < 1 || nSugarPackets < 1 || nCreams < 1 || nCups < 1) {
+            restock(size, sugar, cream, 1);
+        }
     }
 
-    private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
-        nCoffeeOunces += 
+    private void restock(int coffee, int sugar, int cream, int cups) {
+        nCoffeeOunces += coffee;
+        nSugarPackets += sugar;
+        nCreams += cream;
+        nCups += cups;
     }
 
     public static void main(String[] args) {
-        new Cafe();
+        //new Cafe();
     }
     
 }

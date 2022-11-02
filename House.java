@@ -1,17 +1,28 @@
 import java.util.ArrayList;
 
-/* This is a stub for the House class */
 public class House extends Building {
 
 
-  ArrayList<String> residents;
-  boolean hasDiningRoom;
+  private ArrayList<String> residents;
+  private boolean hasDiningRoom;
 
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super (name, address, nFloors);
     this.hasDiningRoom = hasDiningRoom;
     this.residents = new ArrayList<>();
     System.out.println("You have built a house: 🏠");
+  }
+
+  public boolean hasDiningRoom(){
+    if (hasDiningRoom = true) {
+      return true;
+    } else {
+        return false;
+    }
+  }
+
+  public int nResidents(){
+    return residents.size();
   }
 
   public static void main(String[] args) {

@@ -11,19 +11,19 @@ public class Library extends Building {
     }
 
     public void addTitle(String title) {
-        //TODO Add method
+        collection.put(title, true);
     }
 
     public String removeTitle(String title) {
-        //TODO Add method
+        collection.remove(title);
     }
 
     public void checkOut(String title) {
-        //TODO Add method
+        collection.replace(title, true, false);
     }
 
     public void return(String title) {
-        //TODO Add method
+        collection.get(title);
     }
   
     public static void main(String[] args) {

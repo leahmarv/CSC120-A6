@@ -1,3 +1,10 @@
+/*
+ * House Class
+ * Assignment 6
+ * @author R. Jordan Crouser + CSC120 (Fall '22)) + Leah Marville
+ * @version 1 November 2022
+ */
+
 import java.util.ArrayList;
 
 public class House extends Building {
@@ -46,7 +53,7 @@ public class House extends Building {
     }
     return false;
   }
-  
+
   public static void main(String[] args) {
     //new House();
   }

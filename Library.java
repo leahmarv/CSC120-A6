@@ -23,9 +23,30 @@ public class Library extends Building {
     }
 
     public void return(String title) {
-        collection.get(title);
+      collection.replace(title, true, false);
     }
   
+    public boolean containsTitle(String title) {
+      for (int i = 0; i < collection.size() - 1; i++) {
+        if (collection.contains(title)) {
+          return collection.get(title);
+        }
+      }
+      return false;
+    }
+
+    public boolean isAvailable(String title) {
+      if (collection.get(title) ==  true) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    public void printCollection() {
+      collection.toString();
+    }
+
     public static void main(String[] args) {
       new Library();
     }

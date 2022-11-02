@@ -13,7 +13,7 @@ public class House extends Building {
     System.out.println("You have built a house: 🏠");
   }
 
-  public boolean hasDiningRoom(){
+  public boolean hasDiningRoom() {
     if (hasDiningRoom = true) {
       return true;
     } else {
@@ -21,10 +21,32 @@ public class House extends Building {
     }
   }
 
-  public int nResidents(){
+  public int nResidents() {
     return residents.size();
   }
 
+  public void moveIn(String name) {
+    residents.add(name);
+  }
+
+  public String moveOut(String name) {
+      for (int i = 0; i < residents.size() - 1; i++) {
+        if (residents.contains(name)) {
+          return residents.get(i);
+        }
+      }
+      return "Resident not found.";
+  }
+
+  public boolean isResident(String person){
+    for (int i = 0; i < residents.size() - 1; i++) {
+      if (residents.contains(person)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   public static void main(String[] args) {
     //new House();
   }
